@@ -1,17 +1,16 @@
-import Helper from './data.js';
+import Book from './data.js';
 
-const helperObj = new Helper();
+const bookObj = new Book();
 
-// display the books in the localStorage on load
-helperObj.display();
+bookObj.display();
 
-// Event listener for the addition to localStorage and rendering of HTML to page
-document.querySelector('#add-btn').addEventListener('click', () => {
+document.querySelector('#add-btn').addEventListener('click', (e) => {
+  e.preventDefault();
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
   if (title === '' || author === '') return;
-  helperObj.add(title, author);
+  bookObj.add(title, author);
   document.querySelectorAll('.remove').forEach((elem) => {
-    elem.addEventListener('click', (e) => helperObj.remove(e, e.currentTarget.dataset.id));
+    elem.addEventListener('click', (e) => bookObj.remove(e, e.currentTarget.dataset.id));
   });
 });

@@ -4,15 +4,9 @@ import Utils from './utils.js';
 
 const utilsObj = new Utils();
 const noBook = document.querySelector('#no-data');
-/**
- * @object helperObj to hold all helper methods
- */
-export default class Helper {
-  /**
-   * @function add - helper method for addition of books to localStorage
-   * @param {string} title - The title of the book to be added
-   * @param {string} author - The author of the book to be added
-   */
+
+export default class Book {
+ 
   add(title, author) {
     const books = JSON.parse(localStorage.getItem('books')) || [];
     let id;
@@ -29,11 +23,7 @@ export default class Helper {
     noBook.textContent = '';
   }
 
-  /**
-   * @function
-   * @param {Object} e - The event object
-   * @param {string} id - The string id of the button dataset
-   */
+  
   remove(e, id) {
     id = parseInt(id, 10);
     const stack = JSON.parse(localStorage.getItem('books'));
@@ -42,9 +32,7 @@ export default class Helper {
     e.currentTarget.parentElement.remove();
   }
 
-  /**
-   * @function display - helper function to display books on load
-   */
+  
   display() {
     const stack = JSON.parse(localStorage.getItem('books'));
     if (stack.length > 0) {
@@ -52,7 +40,7 @@ export default class Helper {
         const { id, title, author } = item;
         utilsObj.render(title, author, id);
         document.querySelector('#title').focus();
-        noBook.textContent = '';
+        
       });
     } else {
       noBook.textContent = 'No book added yet';
