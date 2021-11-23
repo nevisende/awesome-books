@@ -4,7 +4,8 @@ import { helperObj } from './data.js';
 helperObj.display();
 
 // Event listener for the addition to localStorage and rendering of HTML to page
-document.querySelector('#add-btn').addEventListener('click', () => {
+document.querySelector('#add-btn').addEventListener('click', (e) => {
+  e.preventDefault();
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
   if (title === '' || author === '') {
