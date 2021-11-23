@@ -13,7 +13,7 @@ export const helperObj = {
    */
   add(title, author) {
     const books = JSON.parse(localStorage.getItem('books')) || [];
-    let id = books.length;
+    const id = books.length;
     books.push({ id, title, author });
     localStorage.setItem('books', JSON.stringify(books));
     utilsObj.render(title, author, id);
