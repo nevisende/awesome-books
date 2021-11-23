@@ -1,35 +1,18 @@
-/* eslint-disable rule-you-want-to-disable */ 
+import { helperObj } from './data.js';
 
-const addBookButton = document.getElementById('add-book-button');
-const body = document.querySelector('body');
-let listBooks = [];
+// display the books in the localStorage on load
+helperObj.display();
 
-
-body.onload = () => {
-  if (localStorage.getItem("listBooks")) {
-    listBooks = JSON.parse(localStorage.getItem("listBooks"));
-    };
-}
-
-function addBook(id) {
-  const bookTitle = document.getElementById('book-title-input').value;
-  const bookAuthor = document.getElementById('book-author-input').value;
-  const book = { bookTitle, bookAuthor, id };
-  listBooks.push(book);
-  const listBooksString = JSON.stringify(listBooks);
-  localStorage.setItem("listBooks", listBooksString);
-};
-
-function removeBook(id) {
-  listBooks = listBooks.filter((el) => el.id !== id);
-  const listBooksString = JSON.stringify(listBooks);
-  localStorage.setItem("listBooks", listBooksString);
-}
-
-addBookButton.addEventListener('click', (e) => {
-  const id = Math.round(Math.random() * 1000000);
-
+// Event listener for the addition to localStorage and rendering of HTML to page
+document.querySelector('#add-btn').addEventListener('click', (e) => {
   e.preventDefault();
-  addBook(id);
+  const title = document.querySelector('#title').value;
+  const author = document.querySelector('#author').value;
+  if (title === '' || author === '') {
+    return;
+  }
+  helperObj.add(title, author);
+  document.querySelectorAll('.remove').forEach((elem) => {
+    elem.addEventListener('click', (e) => helperObj.remove(e, e.currentTarget.dataset.id));
+  });
 });
-
