@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import Book from './data.js';
 
 const bookObj = new Book();
