@@ -1,7 +1,6 @@
 /* eslint-disable class-methods-use-this */
 
 export default class Utils {
-
   displayHTML(title, author, id) {
     return `
       <li class="book" style="list-style:none;">

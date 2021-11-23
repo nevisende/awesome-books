@@ -6,7 +6,6 @@ const utilsObj = new Utils();
 const noBook = document.querySelector('#no-data');
 
 export default class Book {
- 
   add(title, author) {
     const books = JSON.parse(localStorage.getItem('books')) || [];
     let id;
@@ -23,7 +22,6 @@ export default class Book {
     noBook.textContent = '';
   }
 
-  
   remove(e, id) {
     id = parseInt(id, 10);
     const stack = JSON.parse(localStorage.getItem('books'));
@@ -32,7 +30,6 @@ export default class Book {
     e.currentTarget.parentElement.remove();
   }
 
-  
   display() {
     const stack = JSON.parse(localStorage.getItem('books'));
     if (stack.length > 0) {
@@ -40,7 +37,6 @@ export default class Book {
         const { id, title, author } = item;
         utilsObj.render(title, author, id);
         document.querySelector('#title').focus();
-        
       });
     } else {
       noBook.textContent = 'No book added yet';
