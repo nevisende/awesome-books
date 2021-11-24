@@ -1,18 +1,17 @@
-import { helperObj } from './data.js';
+/* eslint-disable linebreak-style */
+import Book from './data.js';
 
-// display the books in the localStorage on load
-helperObj.display();
+const bookObj = new Book();
 
-// Event listener for the addition to localStorage and rendering of HTML to page
+bookObj.display();
+
 document.querySelector('#add-btn').addEventListener('click', (e) => {
   e.preventDefault();
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
-  if (title === '' || author === '') {
-    return;
-  }
-  helperObj.add(title, author);
+  if (title === '' || author === '') return;
+  bookObj.add(title, author);
   document.querySelectorAll('.remove').forEach((elem) => {
-    elem.addEventListener('click', (e) => helperObj.remove(e, e.currentTarget.dataset.id));
+    elem.addEventListener('click', (e) => bookObj.remove(e, e.currentTarget.dataset.id));
   });
 });
