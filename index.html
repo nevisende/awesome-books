@@ -10,15 +10,27 @@
 </head>
 
 <body>
+    <header>
+        <nav>
+            <h1>Awesome Books</h1>
+            <ul class="nav-list">
+                <li><a href="#list-books" id="list-link">List</a></li>
+                <li><a href="#add-new" id="add-new-link">Add new</a></li>
+                <li><a href="#contact" id="contact-link">Contact</a></li>
+            </ul>
+        </nav>
+        <p id="time"></p>
+    </header>
     <main>
-        <section class="books">
+
+        <section class="books" id="list-books">
             <h2>All awesome Books</h2>
             <div class="legend">
                 <p id="no-data"></p>
                 <ul id="lists"></ul>
             </div>
         </section>
-        <section class="books">
+        <section class="books" id="add-new">
             <hr class="line">
             <h2>Add a new book</h2>
             <form>
@@ -34,7 +46,34 @@
                 </div>
             </form>
         </section>
+        <section class="books" id="contact">
+            <h2>Contact Information</h2>
+            <div class="contact-info">
+                <p>Do have any questions or you just want to say "Hello"?</p>
+                <p>You can reach out to us!</p>
+            </div>
+            <div class="contact-details">
+                <ul>
+                    <li>
+                        Our Emails:
+                        <a href="mailto:furkandenizhan@gmail.com">furkandenizhan@gmail.com</a> ||
+                        <a href="mailto:mohamedelshamy55@gmail.com">mohamedelshamy55@gmail.com</a>
+                    </li>
+                    <li>Phone Numbers: <b>+90 530 945 4310</b> || <b>+2 011 140 21920</b></li>
+                    <li>
+                        Our Addresses: <b>İstanbul, Turkey.</b> ||
+                        <b>Cairo, Egypt.</b>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
+    <footer>
+        <p>
+            &copy; Classic, Furkan Denizhan & Mohamed Elshamy's Awesome Books. All rights reserved.
+        </p>
+    </footer>
+    <script src="https://moment.github.io/luxon/global/luxon.min.js"></script>
     <script src="script.js" type="module"></script>
 </body>
 
