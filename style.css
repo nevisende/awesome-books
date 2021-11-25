@@ -75,3 +75,29 @@ main * {
   text-align: end;
   margin-right: 1rem;
 }
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: xx-large;
+  padding: 2rem 5rem;
+  background: #fff;
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0 10px 10px -5px;
+  width: 100%;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  font-size: x-large;
+}
+
+#time {
+  text-align: end;
+  margin-inline-end: 5rem;
+  margin-block-start: 2rem;
+  font-size: large;
+}

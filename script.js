@@ -19,3 +19,9 @@ document.querySelector('#add-btn').addEventListener('click', (e) => {
     elem.addEventListener('click', (e) => bookObj.remove(e, e.currentTarget.dataset.id));
   });
 });
+
+function dateHandler() {
+  document.querySelector('#time').innerText = luxon.DateTime.now().toLocaleString(luxon.DateTime.DATETIME_FULL_WITH_SECONDS);
+  setTimeout(dateHandler, 1000);
+}
+dateHandler();
