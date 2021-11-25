@@ -5,99 +5,113 @@
 /* Reset Styles */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 
 /* Global styles */
 
 body {
-  font-size: 16px;
-  font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
 }
 
 ul li {
-  list-style: none;
+    list-style: none;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 main * {
-  text-align: center;
+    text-align: center;
 }
 
 .legend ul li {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.2rem;
-  width: 30vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem;
+    width: 30vw;
 }
 
 .legend ul li:nth-child(odd) {
-  background-color: rgba(144, 144, 144, 0.3);
+    background-color: rgba(144, 144, 144, 0.3);
 }
 
 .legend ul {
-  border: 0.2rem black solid;
+    border: 0.2rem black solid;
 }
 
 .line {
-  margin-top: 1rem;
+    margin-top: 1rem;
 }
 
 .remove {
-  padding: 0.1rem;
-  border: 0.2rem black solid;
+    padding: 0.1rem;
+    border: 0.2rem black solid;
 }
 
 .form-controls input {
-  border: 0.2rem black solid;
-  text-align: start;
-  padding: 0.2rem;
-  margin-bottom: 0.2rem;
+    border: 0.2rem black solid;
+    text-align: start;
+    padding: 0.2rem;
+    margin-bottom: 0.2rem;
 }
 
 #add-btn {
-  padding: 0.1rem;
+    padding: 0.1rem;
 }
 
 .form-btn {
-  text-align: end;
-  margin-right: 1rem;
+    text-align: end;
+    margin-right: 1rem;
 }
 
 header nav {
-  display: flex;
-  justify-content: space-between;
-  font-size: xx-large;
-  padding: 2rem 5rem;
-  background: #fff;
-  box-shadow:
-    rgba(0, 0, 0, 0.1) 0 20px 25px -5px,
-    rgba(0, 0, 0, 0.04) 0 10px 10px -5px;
-  width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: xx-large;
+    padding: 2rem 5rem;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 20px 25px -5px, rgba(0, 0, 0, 0.04) 0 10px 10px -5px;
+    width: 100%;
 }
 
 .nav-list {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  font-size: x-large;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    font-size: x-large;
 }
 
 #time {
-  text-align: end;
-  margin-inline-end: 5rem;
-  margin-block-start: 2rem;
-  font-size: large;
+    text-align: end;
+    margin-inline-end: 5rem;
+    margin-block-start: 2rem;
+    font-size: large;
+}
+
+footer {
+    display: fixed;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+}
+
+#add-new {
+    display: none;
+}
+
+#contact {
+    display: none;
 }
